@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+    http://xmlns.jcp.org/xml/ns/persistence/persistence 2 2.xsd" version="2.2">
+    
+    <persistence-unit name="PersonaPU" transaction-type="JTA">
+<!--        <jta-data-source>jdbc/PersonaDb</jta-data-source>-->
+        <class>com.odavid_projects_it.javaee.app.model.entity.Persona</class>
+        <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Test?useSSL=false&amp;useTimeZone=true&amp;serverTimezone=UTC"/>
+        <property name="javax.persistence.jdbc.user" value="root"/>
+        <property name="javax.persistence.jdbc.password" value="odavid"/>
+        <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.MysqlDataSource"/>
+        <property name="eclipselink.logging.level.sql" value="FINE"></property>
+        <property name="eclipselink.logging.parameters" value="true"></property>
+    </persistence-unit>
+</persistence>
